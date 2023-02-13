@@ -1,3 +1,5 @@
+//@deprecated
+
 import { googleClient } from "./client";
 import { IDENTITY_CONFIG } from "../utils/config";
 
@@ -9,7 +11,6 @@ import { IDENTITY_CONFIG } from "../utils/config";
  * @returns
  */
 export const authorize = async () => {
-  console.log(IDENTITY_CONFIG);
   return googleClient
     .get(IDENTITY_CONFIG.authority, {
       params: {
@@ -20,7 +21,5 @@ export const authorize = async () => {
         scope: IDENTITY_CONFIG.scope,
       },
     })
-    .then((res) => {
-      console.log(res);
-    });
+    .then((res) => res);
 };
