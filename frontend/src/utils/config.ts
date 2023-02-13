@@ -7,6 +7,7 @@ export const OIDC_CONFIG = {
   redirect_uri: import.meta.env.VITE_REDIRECT_URI || "", //(string): The URL to redirect the user to after authentication
   metadata: {
     authorization_endpoint: import.meta.env.VITE_AUTHORIZATION_ENDPOINT || "", //(string):
+    token_endpoint: import.meta.env.VITE_TOKEN_ENDPOINT || "", //(string):
     issuer: import.meta.env.VITE_AUTH_URI || "", //(string): The URL of the OIDC
     userinfo_endpoint: import.meta.env.VITE_USERINFO_ENDPOINT,
     end_session_endpoint: import.meta.env.VITE_END_SESSION_ENDPOINT || "", //(string):
