@@ -3,7 +3,6 @@ import "./App.css";
 
 function App() {
   const auth = useAuth();
-  console.log(import.meta.env);
 
   const getAuthenticationState = () => {
     switch (auth.activeNavigator) {
